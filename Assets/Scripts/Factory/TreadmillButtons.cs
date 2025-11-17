@@ -5,7 +5,8 @@ public class TreadmillButtons : MonoBehaviour
     private SpriteRenderer shade;
     private Color32 shadeColor;
 
-    [SerializeField] private FactoryTreadmillManager treadmill; 
+    [SerializeField] private FactoryTreadmillManager treadmill;
+    [SerializeField] private RepairDesk repairDesk;
 
     [SerializeField] private enum ButtonFunction
     {
@@ -47,6 +48,10 @@ public class TreadmillButtons : MonoBehaviour
         if (buttonFunction == ButtonFunction.SendRobot)
         {
             treadmill.Activate();
+        }
+        else
+        {
+            repairDesk.SetTargetPosition(Vector3.zero);
         }
     }
 

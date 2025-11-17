@@ -10,17 +10,26 @@ public class Tool : MonoBehaviour
 
     private Rigidbody2D rb;
     private SpriteRenderer sr;
+    private RepairDesk desk;
 
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         sr = GetComponent<SpriteRenderer>();
+        desk = transform.parent.parent.parent.GetComponent<RepairDesk>();
 
-        originalPosition = transform.position;
+        originalPosition = transform.parent.position;
     }
 
     private void Update()
     {
+        if (originalPosition != transform.parent.position)
+        {
+            originalPosition = transform.parent.position;
+        }
+
+        if (!desk.IsInteractable()) return;
+
         if (!isPicked && canBePicked && Input.GetKeyDown(KeyCode.Mouse0))
         {
             if (CheckIfHasOtherToolPicked() != null)

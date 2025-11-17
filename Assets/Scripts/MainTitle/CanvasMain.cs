@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class CanvasMain : MonoBehaviour
 {
@@ -11,6 +12,12 @@ public class CanvasMain : MonoBehaviour
     private void Start()
     {
         uiSoundPlayer = GameObject.FindGameObjectWithTag("UISoundPlayer").GetComponent<UISoundPlayerManager>();
+    }
+
+    public void Play()
+    {
+        uiSoundPlayer.PlayMusic(UISoundPlayerManager.CLICK);
+        SceneManager.LoadScene("FactoryScene");
     }
 
     public void Options()

@@ -12,6 +12,13 @@ TagManager:
   - MiniRobot
   - ToolSlot
   - Tool
+  - Ronaldo
+  - Head
+  - Body
+  - LArm
+  - RArm
+  - Tread
+  - MiniRobotPool
   layers:
   - Default
   - TransparentFX

@@ -8,6 +8,8 @@ public class TreadmillButtons : MonoBehaviour
     [SerializeField] private FactoryTreadmillManager treadmill;
     [SerializeField] private RepairDesk repairDesk;
 
+    private Ronaldo ronaldo;
+
     [SerializeField] private enum ButtonFunction
     {
         SendRobot,
@@ -18,6 +20,8 @@ public class TreadmillButtons : MonoBehaviour
 
     private void Start()
     {
+        ronaldo = GameObject.FindGameObjectWithTag("Ronaldo").GetComponent<Ronaldo>();
+
         shade = transform.Find((transform.name) + "Shade").GetComponent<SpriteRenderer>();
         shadeColor = shade.color;
     }
@@ -51,7 +55,11 @@ public class TreadmillButtons : MonoBehaviour
         }
         else
         {
-            repairDesk.SetTargetPosition(Vector3.zero);
+            if (treadmill.GetSpeed() == 0)
+            {
+                ronaldo.SetTarget(new Vector3(5.25f, ronaldo.transform.position.y, 0), Ronaldo.WALK_RIGHT);
+                repairDesk.SetTargetPosition(Vector3.zero);
+            }
         }
     }
 

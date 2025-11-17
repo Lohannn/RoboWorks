@@ -34,7 +34,7 @@ public class FactoryTreadmillManager : MonoBehaviour
     {
         if (!isActive && currentTreadmillSpeed > 0.0f)
         {
-            currentTreadmillSpeed -= 0.5f * Time.deltaTime;
+            currentTreadmillSpeed -= 1f * Time.deltaTime;
 
             if (currentTreadmillSpeed > 0.0f && currentTreadmillSpeed < 0.1f)
             {
@@ -55,7 +55,10 @@ public class FactoryTreadmillManager : MonoBehaviour
 
     public void Activate()
     {
-        isActive = true;
+        if (currentTreadmillSpeed <= 0)
+        {
+            isActive = true;
+        }
     }
 
     public void Deactivate()

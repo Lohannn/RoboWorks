@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: d22bbbdab3deef94f933945887654192
+guid: 24ef5f76997d7684abe939f7438e5ec1
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 6498894039304740747
-    second: EsteiraTileMap_0
+      213: -1765567918003298020
+    second: MesaGSResize_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: EsteiraTileMap_0
+      name: MesaGSResize_0
       rect:
         serializedVersion: 2
-        x: 63
-        y: 0
-        width: 98
-        height: 256
+        x: 0
+        y: 32
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,118 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b8f99a532b5b03a50800000000000000
-      internalID: 6498894039304740747
+      spriteID: c11669c35517f77e0800000000000000
+      internalID: -1765567918003298020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MesaGSResize_1
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 911ab19aac840b349b4e8ebf06e26c10
+      internalID: -709508142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MesaGSResize_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1f2cd807d2d70a4d8e3aa92c1d20fef
+      internalID: -1453264323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MesaGSResize_3
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b4bef317e5e9564784774aad0f264ac
+      internalID: 183629042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MesaGSResize_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2eff30008c926bf4dae7af0e962bdcc5
+      internalID: -1328341358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MesaGSResize_5
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf1a1388b30875747ba96121810e11aa
+      internalID: -1287135340
       vertices: []
       indices: 
       edges: []
@@ -138,7 +248,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: f56cf625ca309704c999b989aec76630
     internalID: 0
     vertices: []
     indices: 
@@ -148,7 +258,12 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      EsteiraTileMap_0: 6498894039304740747
+      MesaGSResize_0: -1765567918003298020
+      MesaGSResize_1: -709508142
+      MesaGSResize_2: -1453264323
+      MesaGSResize_3: 183629042
+      MesaGSResize_4: -1328341358
+      MesaGSResize_5: -1287135340
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

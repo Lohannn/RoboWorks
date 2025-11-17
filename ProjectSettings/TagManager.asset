@@ -8,6 +8,10 @@ TagManager:
   - ImageTreadmillBot
   - MusicPlayer
   - UISoundPlayer
+  - TreadmillStopPoint
+  - MiniRobot
+  - ToolSlot
+  - Tool
   layers:
   - Default
   - TransparentFX

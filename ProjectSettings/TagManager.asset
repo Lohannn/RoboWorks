@@ -19,6 +19,7 @@ TagManager:
   - RArm
   - Tread
   - MiniRobotPool
+  - MiniRobotSpawner
   layers:
   - Default
   - TransparentFX

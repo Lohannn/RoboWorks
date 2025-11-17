@@ -2122,9 +2122,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1026035516}
+  - component: {fileID: 1026035517}
   m_Layer: 0
   m_Name: MiniRobotSpawner
-  m_TagString: Untagged
+  m_TagString: MiniRobotSpawner
   m_Icon: {fileID: -5397416234189338067, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2138,12 +2139,25 @@ Transform:
   m_GameObject: {fileID: 1026035515}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4.5, y: 8.5, z: -0.009087087}
+  m_LocalPosition: {x: -4.5, y: 8.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 263706669}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1026035517
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1026035515}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 305412423856b2d48981efc7486d64da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeToSpawn: 3.7
 --- !u!1 &1124301147
 GameObject:
   m_ObjectHideFlags: 0
@@ -4177,7 +4191,7 @@ Transform:
   m_GameObject: {fileID: 1131818352}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -9.5, y: 0.5, z: -0.03530987}
+  m_LocalPosition: {x: -9.5, y: 0.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4206,11 +4220,18 @@ MonoBehaviour:
   - {fileID: 6874818186005095481, guid: 99b035c9861a1ec43a27e6ba94bc9442, type: 3}
   - {fileID: 4699827117234834992, guid: bc1707b2609f4b44da1e578cfc64a7bc, type: 3}
   lArms:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  rArms: []
-  treads: []
+  - {fileID: 3877654497779603727, guid: d7291cd59481f7a4bad54dc34a3c15b9, type: 3}
+  - {fileID: 6396643842878852638, guid: cd58cde714aaba6489c979d25e436ae6, type: 3}
+  - {fileID: 1497309089640290156, guid: f21fd611dbf55f642908f2945aad14d3, type: 3}
+  rArms:
+  - {fileID: 4862464212415736643, guid: da5d9927e7d73134eb26ee35624d88c3, type: 3}
+  - {fileID: 3393890868665725635, guid: 0aa6b3325bf36ae419d9bcdffc424197, type: 3}
+  - {fileID: 3048063144915983167, guid: 583161d77c3001d4893d30f8f42a3d81, type: 3}
+  treads:
+  - {fileID: 422279991666597519, guid: dbcaab4ce5fdf1c43baae05220774cea, type: 3}
+  - {fileID: 814991579907591662, guid: c4f4540e2404ad748b9b73a518941a35, type: 3}
+  - {fileID: 6269442983537305387, guid: 4d7fae163ce9d034d9fdcdc5698bb4d2, type: 3}
+  - {fileID: 2537551279033400229, guid: f3463a4961d706b42906efbb2c94a36f, type: 3}
 --- !u!1 &1328917832
 GameObject:
   m_ObjectHideFlags: 0

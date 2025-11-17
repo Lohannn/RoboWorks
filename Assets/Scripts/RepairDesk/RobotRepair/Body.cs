@@ -9,4 +9,9 @@ public class Body : MonoBehaviour
     }
 
     [SerializeField] private State state;
+
+    public string GetState()
+    {
+        return state.ToString();
+    }
 }

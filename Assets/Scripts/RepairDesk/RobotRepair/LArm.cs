@@ -10,4 +10,9 @@ public class LArm : MonoBehaviour
     }
 
     [SerializeField] private State state;
+
+    public string GetState()
+    {
+        return state.ToString();
+    }
 }

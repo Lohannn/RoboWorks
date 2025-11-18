@@ -39,13 +39,11 @@ public class Tool : MonoBehaviour
 
             isPicked = true;
             gameObject.layer = LayerMask.NameToLayer("Ignore Raycast");
-            sr.sortingOrder = 114;
         }
         else if (isPicked && canReturn && Input.GetKeyDown(KeyCode.Mouse0))
         {
             isPicked = false;
             gameObject.layer = LayerMask.NameToLayer("Default");
-            sr.sortingOrder = 113;
         }
     }
 
@@ -80,7 +78,6 @@ public class Tool : MonoBehaviour
     {
         isPicked = false;
         gameObject.layer = LayerMask.NameToLayer("Default");
-        sr.sortingOrder = 113;
     }
 
     private Tool CheckIfHasOtherToolPicked()

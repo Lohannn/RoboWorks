@@ -8,6 +8,12 @@ public class TreadmillButtons : MonoBehaviour
     [SerializeField] private FactoryTreadmillManager treadmill;
     [SerializeField] private RepairDesk repairDesk;
 
+    [SerializeField] private Transform robotHeadSpawner;
+    [SerializeField] private Transform robotBodySpawner;
+    [SerializeField] private Transform robotTreadSpawner;
+    [SerializeField] private Transform robotLArmSpawner;
+    [SerializeField] private Transform robotRArmSpawner;
+
     private Ronaldo ronaldo;
 
     [SerializeField] private enum ButtonFunction
@@ -55,9 +61,12 @@ public class TreadmillButtons : MonoBehaviour
         }
         else
         {
-            if (treadmill.GetSpeed() == 0)
+            if (treadmill.GetSpeed() == 0 && treadmill.GetCurrentRobot() != null)
             {
                 ronaldo.SetTarget(new Vector3(5.25f, ronaldo.transform.position.y, 0), Ronaldo.WALK_RIGHT);
+
+                SpawnRobotParts(treadmill.GetCurrentRobot());
+
                 repairDesk.SetTargetPosition(Vector3.zero);
             }
         }
@@ -66,5 +75,43 @@ public class TreadmillButtons : MonoBehaviour
     private void OnMouseUp()
     {
         shade.color = shadeColor;
+    }
+
+    private void SpawnRobotParts(MiniRobot currentRobot)
+    {
+        if (robotHeadSpawner.childCount > 0)
+        {
+            Destroy(robotHeadSpawner.GetChild(0).gameObject);
+        }
+        GameObject head = Instantiate(currentRobot.GetHead(), robotHeadSpawner.position, Quaternion.identity);
+        head.transform.SetParent(robotHeadSpawner);
+
+        if (robotBodySpawner.childCount > 0)
+        {
+            Destroy(robotBodySpawner.GetChild(0).gameObject);
+        }
+        GameObject body = Instantiate(currentRobot.GetBody(), robotBodySpawner.position, Quaternion.identity);
+        body.transform.SetParent(robotBodySpawner);
+
+        if (robotTreadSpawner.childCount > 0)
+        {
+            Destroy(robotTreadSpawner.GetChild(0).gameObject);
+        }
+        GameObject tread = Instantiate(currentRobot.GetTread(), robotTreadSpawner.position, Quaternion.identity);
+        tread.transform.SetParent(robotTreadSpawner);
+
+        if (robotLArmSpawner.childCount > 0)
+        {
+            Destroy(robotLArmSpawner.GetChild(0).gameObject);
+        }
+        GameObject lArm = Instantiate(currentRobot.GetLArm(), robotLArmSpawner.position, Quaternion.identity);
+        lArm.transform.SetParent(robotLArmSpawner);
+
+        if (robotRArmSpawner.childCount > 0)
+        {
+            Destroy(robotRArmSpawner.GetChild(0).gameObject);
+        }
+        GameObject rArm = Instantiate(currentRobot.GetRArm(), robotRArmSpawner.position, Quaternion.identity);
+        rArm.transform.SetParent(robotRArmSpawner);
     }
 }

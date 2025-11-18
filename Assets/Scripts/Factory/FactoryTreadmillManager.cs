@@ -6,6 +6,8 @@ public class FactoryTreadmillManager : MonoBehaviour
     private float currentTreadmillSpeed;
     private bool isActive = true;
 
+    private MiniRobot currentRobot;
+
     private void Start()
     {
         currentTreadmillSpeed = treadmillMoveSpeed;
@@ -41,6 +43,16 @@ public class FactoryTreadmillManager : MonoBehaviour
                 currentTreadmillSpeed = 0;
             }
         }
+    }
+
+    public MiniRobot GetCurrentRobot()
+    {
+        return currentRobot;
+    }
+
+    public void SetCurrentRobot(MiniRobot robot)
+    {
+        currentRobot = robot;
     }
 
     public float GetSpeed()

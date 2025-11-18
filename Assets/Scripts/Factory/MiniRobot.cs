@@ -52,13 +52,7 @@ public class MiniRobot : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.CompareTag("TreadmillStopPoint"))
-        {
-            manager.Deactivate();
-        }
-    }
+    
 
     #region Getters and Setters
     public string GetStatus()
@@ -133,5 +127,22 @@ public class MiniRobot : MonoBehaviour
         transform.SetParent(null);
         transform.position = new Vector2(-9.5f, 0.5f);
         gameObject.SetActive(false);
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("TreadmillStopPoint"))
+        {
+            manager.SetCurrentRobot(this);
+            manager.Deactivate();
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.CompareTag("TreadmillStopPoint"))
+        {
+            manager.SetCurrentRobot(null);
+        }
     }
 }

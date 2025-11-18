@@ -1653,6 +1653,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   treadmill: {fileID: 263706671}
   repairDesk: {fileID: 79606617}
+  robotHeadSpawner: {fileID: 548295393}
+  robotBodySpawner: {fileID: 182627760}
+  robotTreadSpawner: {fileID: 906507458}
+  robotLArmSpawner: {fileID: 1475857124}
+  robotRArmSpawner: {fileID: 310196081}
   buttonFunction: 1
 --- !u!1 &527057703
 GameObject:
@@ -5101,6 +5106,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   treadmill: {fileID: 263706671}
   repairDesk: {fileID: 79606617}
+  robotHeadSpawner: {fileID: 0}
+  robotBodySpawner: {fileID: 0}
+  robotTreadSpawner: {fileID: 0}
+  robotLArmSpawner: {fileID: 0}
+  robotRArmSpawner: {fileID: 0}
   buttonFunction: 0
 --- !u!1 &1604004416
 GameObject:

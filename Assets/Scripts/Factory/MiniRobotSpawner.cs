@@ -7,9 +7,11 @@ public class MiniRobotSpawner : MonoBehaviour
     private int spawnedRobotsCount = 0;
 
     private MiniRobotPool pool;
+    private SFXSoundPlayerManager uiSoundPlayer;
 
     private void Start()
     {
+        uiSoundPlayer = GameObject.FindGameObjectWithTag("UISoundPlayer").GetComponent<SFXSoundPlayerManager>();
         pool = GameObject.FindGameObjectWithTag("MiniRobotPool").GetComponent<MiniRobotPool>();
         StartCoroutine(SpawnRobots(timeToSpawn));
     }
@@ -27,6 +29,7 @@ public class MiniRobotSpawner : MonoBehaviour
 
     public void RobotSended()
     {
+        uiSoundPlayer.PlayMusic(SFXSoundPlayerManager.SEND_ROBOT);
         spawnedRobotsCount--;
     }
 }

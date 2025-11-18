@@ -3,11 +3,11 @@ using UnityEngine.UI;
 
 public class CanvasExit : MonoBehaviour
 {
-    private UISoundPlayerManager uiSoundPlayer;
+    private SFXSoundPlayerManager uiSoundPlayer;
 
     private void Start()
     {
-        uiSoundPlayer = GameObject.FindGameObjectWithTag("UISoundPlayer").GetComponent<UISoundPlayerManager>();
+        uiSoundPlayer = GameObject.FindGameObjectWithTag("UISoundPlayer").GetComponent<SFXSoundPlayerManager>();
     }
 
     public void Confirm()
@@ -21,7 +21,7 @@ public class CanvasExit : MonoBehaviour
 
     public void Cancel()
     {
-        uiSoundPlayer.PlayMusic(UISoundPlayerManager.CLICK);
+        uiSoundPlayer.PlayMusic(SFXSoundPlayerManager.CLICK);
         GetComponent<Canvas>().enabled = false;
     }
 }

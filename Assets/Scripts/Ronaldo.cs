@@ -7,6 +7,7 @@ public class Ronaldo : MonoBehaviour
     private Vector3 targePosition;
     private string lastAnimationTrigger;
 
+    private AudioSource audioSource;
     private Animator animator;
 
     public const string IDLE_UP = "pIdleUp";
@@ -21,19 +22,28 @@ public class Ronaldo : MonoBehaviour
     private void Start()
     {
         animator = GetComponent<Animator>();
+        audioSource = GetComponent<AudioSource>();
 
         SetTarget(new Vector3(-0.35f, transform.position.y, 0), WALK_LEFT);
     }
 
     private void Update()
     {
+        audioSource.volume = GameManager.sfxVolume;
+
         if (canMove)
         {
+            if (!audioSource.isPlaying)
+            {
+                audioSource.Play();
+            }
+
             transform.position = Vector3.MoveTowards(transform.position, targePosition, speed * Time.deltaTime);
 
             if (transform.position == targePosition)
             {
                 canMove = false;
+                audioSource.Stop();
 
                 switch (lastAnimationTrigger)
                 {

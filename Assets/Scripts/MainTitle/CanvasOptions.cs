@@ -9,13 +9,13 @@ public class CanvasOptions : MonoBehaviour
     private AudioSource musicVolume;
     private AudioSource sfxVolume;
 
-    private UISoundPlayerManager uiSoundPlayer;
+    private SFXSoundPlayerManager uiSoundPlayer;
 
     private void Start()
     {
         musicVolume = GameObject.FindGameObjectWithTag("MusicPlayer").GetComponent<AudioSource>();
         sfxVolume = GameObject.FindGameObjectWithTag("UISoundPlayer").GetComponent<AudioSource>();
-        uiSoundPlayer = GameObject.FindGameObjectWithTag("UISoundPlayer").GetComponent<UISoundPlayerManager>();
+        uiSoundPlayer = GameObject.FindGameObjectWithTag("UISoundPlayer").GetComponent<SFXSoundPlayerManager>();
 
         musicVolumeSlider.value = GameManager.musicVolume;
         sfxVolumeSlider.value = GameManager.sfxVolume;
@@ -34,7 +34,7 @@ public class CanvasOptions : MonoBehaviour
 
     public void Back()
     {
-        uiSoundPlayer.PlayMusic(UISoundPlayerManager.CLICK);
+        uiSoundPlayer.PlayMusic(SFXSoundPlayerManager.CLICK);
         GetComponent<Canvas>().enabled = false;
     }
 }

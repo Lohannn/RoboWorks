@@ -14,9 +14,11 @@ public class Head : MonoBehaviour
     [SerializeField] Sprite[] sprites;
 
     private SpriteRenderer sr;
+    private SFXSoundPlayerManager uiSoundPlayer;
 
     private void Start()
     {
+        uiSoundPlayer = GameObject.FindGameObjectWithTag("UISoundPlayer").GetComponent<SFXSoundPlayerManager>();
         sr = GetComponent<SpriteRenderer>();
     }
 
@@ -37,6 +39,8 @@ public class Head : MonoBehaviour
     {
         if (CheckIfHasAToolPicked())
         {
+            uiSoundPlayer.PlayMusic(SFXSoundPlayerManager.FIX_ROBOT);
+
             if (state == State.BrokenTurnedOff && CheckIfHasAToolPicked().gameObject.name == "Hammer")
             {
                 sr.sprite = sprites[2];

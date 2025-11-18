@@ -115,6 +115,7 @@ public class TreadmillButtons : MonoBehaviour
         GameObject rArm = Instantiate(currentRobot.GetRArm(), robotRArmSpawner.position, Quaternion.identity);
         rArm.transform.SetParent(robotRArmSpawner);
 
+        confirmSend.SetRobotParts(GameObject.FindGameObjectsWithTag("RobotPart"));
         confirmSend.SetRobot(treadmill.GetCurrentRobot());
         confirmSend.Hide();
     }

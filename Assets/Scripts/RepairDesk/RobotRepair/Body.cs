@@ -12,9 +12,11 @@ public class Body : MonoBehaviour
     [SerializeField] Sprite[] sprites;
 
     private SpriteRenderer sr;
+    private SFXSoundPlayerManager uiSoundPlayer;
 
     private void Start()
     {
+        uiSoundPlayer = GameObject.FindGameObjectWithTag("UISoundPlayer").GetComponent<SFXSoundPlayerManager>();
         sr = GetComponent<SpriteRenderer>();
     }
 
@@ -35,6 +37,8 @@ public class Body : MonoBehaviour
     {
         if (CheckIfHasAToolPicked() != null && CheckIfHasAToolPicked().gameObject.name == "Screwdriver")
         {
+            uiSoundPlayer.PlayMusic(SFXSoundPlayerManager.FIX_ROBOT);
+
             if (state == State.Broken)
             {
                 sr.sprite = sprites[0];

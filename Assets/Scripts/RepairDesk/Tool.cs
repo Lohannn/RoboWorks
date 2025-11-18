@@ -11,9 +11,11 @@ public class Tool : MonoBehaviour
     private Rigidbody2D rb;
     private SpriteRenderer sr;
     private RepairDesk desk;
+    private SFXSoundPlayerManager uiSoundPlayer;
 
     private void Start()
     {
+        uiSoundPlayer = GameObject.FindGameObjectWithTag("UISoundPlayer").GetComponent<SFXSoundPlayerManager>();
         rb = GetComponent<Rigidbody2D>();
         sr = GetComponent<SpriteRenderer>();
         desk = transform.parent.parent.parent.GetComponent<RepairDesk>();
@@ -32,6 +34,8 @@ public class Tool : MonoBehaviour
 
         if (!isPicked && canBePicked && Input.GetKeyDown(KeyCode.Mouse0))
         {
+            uiSoundPlayer.PlayMusic(SFXSoundPlayerManager.TOOLS);
+
             if (CheckIfHasOtherToolPicked() != null)
             {
                 CheckIfHasOtherToolPicked().SwitchTool();

@@ -1850,7 +1850,7 @@ GameObject:
   - component: {fileID: 1249848725}
   - component: {fileID: 1249848724}
   m_Layer: 0
-  m_Name: UISoundPlayer
+  m_Name: SFXSoundPlayer
   m_TagString: UISoundPlayer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1885,6 +1885,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   soundClips:
   - {fileID: 8300000, guid: 0487cbc1639a79142b5219cb0409e2c1, type: 3}
+  - {fileID: 8300000, guid: b4c62c9d4a7334d43802121324abdea0, type: 3}
+  - {fileID: 8300000, guid: 84d5ef0837b272541af860f677c62934, type: 3}
+  - {fileID: 8300000, guid: 7cad49552fff679458658d90347c39ee, type: 3}
 --- !u!82 &1249848725
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2952,6 +2955,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   musicClips:
   - {fileID: 8300000, guid: a96f3d31f76e6774d93d95f4863aec2d, type: 3}
+  - {fileID: 8300000, guid: 3e88028068c11d2488b97dc2bdd7ea48, type: 3}
 --- !u!4 &1630447806
 Transform:
   m_ObjectHideFlags: 0

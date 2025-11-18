@@ -109,8 +109,6 @@ public class MiniRobotPool : MonoBehaviour
 
     private bool IsAllThePartsPerfect(MiniRobot robot)
     {
-        print(robot.GetHead());
-
         return robot.GetHead().GetComponent<Head>().GetState() == "Perfect" &&
                robot.GetBody().GetComponent<Body>().GetState() == "Perfect" &&
                robot.GetLArm().GetComponent<LArm>().GetState() == "Perfect" &&

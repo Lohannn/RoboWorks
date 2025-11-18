@@ -13,9 +13,11 @@ public class LArm : MonoBehaviour
     [SerializeField] Sprite[] sprites;
 
     private SpriteRenderer sr;
+    private SFXSoundPlayerManager uiSoundPlayer;
 
     private void Start()
     {
+        uiSoundPlayer = GameObject.FindGameObjectWithTag("UISoundPlayer").GetComponent<SFXSoundPlayerManager>();
         sr = GetComponent<SpriteRenderer>();
     }
 
@@ -36,6 +38,8 @@ public class LArm : MonoBehaviour
     {
         if (CheckIfHasAToolPicked() != null && CheckIfHasAToolPicked().gameObject.name == "Wrench" || CheckIfHasAToolPicked().gameObject.name == "DoubleWrench")
         {
+            uiSoundPlayer.PlayMusic(SFXSoundPlayerManager.FIX_ROBOT);
+
             if (state == State.SemiBroken)
             {
                 sr.sprite = sprites[0];

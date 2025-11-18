@@ -14,6 +14,7 @@ public class TreadmillButtons : MonoBehaviour
     [SerializeField] private Transform robotLArmSpawner;
     [SerializeField] private Transform robotRArmSpawner;
 
+    [SerializeField] private ButtonConfirmSend confirmSend;
     private Ronaldo ronaldo;
 
     [SerializeField] private enum ButtonFunction
@@ -113,5 +114,8 @@ public class TreadmillButtons : MonoBehaviour
         }
         GameObject rArm = Instantiate(currentRobot.GetRArm(), robotRArmSpawner.position, Quaternion.identity);
         rArm.transform.SetParent(robotRArmSpawner);
+
+        confirmSend.SetRobot(treadmill.GetCurrentRobot());
+        confirmSend.Hide();
     }
 }

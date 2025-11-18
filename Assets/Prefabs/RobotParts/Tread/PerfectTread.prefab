@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 2424455952007282411}
   m_Layer: 0
   m_Name: PerfectTread
-  m_TagString: Tread
+  m_TagString: RobotPart
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

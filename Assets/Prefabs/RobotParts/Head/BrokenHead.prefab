@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 2037492566817156423}
   m_Layer: 0
   m_Name: BrokenHead
-  m_TagString: Head
+  m_TagString: RobotPart
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -176,3 +176,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   state: 1
+  sprites:
+  - {fileID: 1636542033914936930, guid: 20124ae4f4fe6f746b1c6a4aa705579c, type: 3}
+  - {fileID: 3879012734366732215, guid: 20124ae4f4fe6f746b1c6a4aa705579c, type: 3}
+  - {fileID: 3809414380849898378, guid: 20124ae4f4fe6f746b1c6a4aa705579c, type: 3}

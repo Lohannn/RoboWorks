@@ -12,6 +12,8 @@ public class MiniRobot : MonoBehaviour
     [SerializeField] private Status status;
     private Status originalStatus;
 
+    [SerializeField] private Sprite perfectBot;
+    private Sprite originalBot;
     [SerializeField] private GameObject defaultHead;
     private GameObject head;
     [SerializeField] private GameObject defaultBody;
@@ -22,8 +24,10 @@ public class MiniRobot : MonoBehaviour
     private GameObject lArm;
     [SerializeField] private GameObject defaultRArm;
     private GameObject rArm;
+    private Vector3 originalScale;
 
     private MiniRobotSpawner spawner;
+    private SpriteRenderer sr;
 
     private void OnDisable()
     {
@@ -36,6 +40,10 @@ public class MiniRobot : MonoBehaviour
 
     private void Start()
     {
+        sr = gameObject.GetComponent<SpriteRenderer>();
+
+        originalBot = sr.sprite;
+        originalScale = transform.localScale;
         manager = transform.parent.GetComponent<FactoryTreadmillManager>();
         spawner = GameObject.FindGameObjectWithTag("MiniRobotSpawner").GetComponent<MiniRobotSpawner>();
         originalStatus = status;
@@ -47,12 +55,11 @@ public class MiniRobot : MonoBehaviour
 
         if (transform.position.y <= -6.5f)
         {
+            GameObject.FindGameObjectWithTag("PopUp").GetComponent<RobotSendPopUp>().Activate();
             spawner.RobotSended();
             ResetAndDeactivate();
         }
     }
-
-    
 
     #region Getters and Setters
     public string GetStatus()
@@ -124,9 +131,22 @@ public class MiniRobot : MonoBehaviour
         lArm = defaultLArm;
         rArm = defaultRArm;
         status = originalStatus;
+        sr.sprite = originalBot;
+        transform.localScale = originalScale;
         transform.SetParent(null);
         transform.position = new Vector2(-9.5f, 0.5f);
         gameObject.SetActive(false);
+    }
+
+    public void Repair()
+    {
+        head = defaultHead;
+        body = defaultBody;
+        tread = defaultTread;
+        lArm = defaultLArm;
+        rArm = defaultRArm;
+        sr.sprite = perfectBot;
+        transform.localScale = new Vector3(1, 1, 1);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

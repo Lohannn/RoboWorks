@@ -103,6 +103,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   status: 1
+  perfectBot: {fileID: -2394301353303163844, guid: dbf09ae68c691a348882d962f3a76a86, type: 3}
   defaultHead: {fileID: 5576754597687049706, guid: 22b1e3219b08ecd41960f6507f7d3e34, type: 3}
   defaultBody: {fileID: 6874818186005095481, guid: 99b035c9861a1ec43a27e6ba94bc9442, type: 3}
   defaultTread: {fileID: 422279991666597519, guid: dbcaab4ce5fdf1c43baae05220774cea, type: 3}

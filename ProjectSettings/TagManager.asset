@@ -20,6 +20,8 @@ TagManager:
   - Tread
   - MiniRobotPool
   - MiniRobotSpawner
+  - RobotPart
+  - PopUp
   layers:
   - Default
   - TransparentFX

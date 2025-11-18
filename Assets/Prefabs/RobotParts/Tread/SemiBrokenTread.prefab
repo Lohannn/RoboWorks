@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: -2287017707812349593}
   m_Layer: 0
   m_Name: SemiBrokenTread
-  m_TagString: Tread
+  m_TagString: RobotPart
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -176,3 +176,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   state: 2
+  sprites:
+  - {fileID: 3287064862434278581, guid: 20124ae4f4fe6f746b1c6a4aa705579c, type: 3}
+  - {fileID: 3106896505695609088, guid: 20124ae4f4fe6f746b1c6a4aa705579c, type: 3}
+  - {fileID: 5958244545597905610, guid: 20124ae4f4fe6f746b1c6a4aa705579c, type: 3}

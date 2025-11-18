@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 4817212856369075682}
   m_Layer: 0
   m_Name: BrokenRArm
-  m_TagString: RArm
+  m_TagString: RobotPart
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -176,3 +176,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   state: 0
+  sprites:
+  - {fileID: -3620144943306378797, guid: 20124ae4f4fe6f746b1c6a4aa705579c, type: 3}
+  - {fileID: 1266833148151528685, guid: 20124ae4f4fe6f746b1c6a4aa705579c, type: 3}

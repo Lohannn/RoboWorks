@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 9154509972105446015}
   m_Layer: 0
   m_Name: PerfectRArm
-  m_TagString: RArm
+  m_TagString: RobotPart
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

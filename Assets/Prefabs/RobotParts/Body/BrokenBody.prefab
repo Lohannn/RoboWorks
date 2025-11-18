@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: -7892178526710978216}
   m_Layer: 0
   m_Name: BrokenBody
-  m_TagString: Body
+  m_TagString: RobotPart
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -161,7 +161,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1.7, y: 2.2}
+  m_Size: {x: 1.34, y: 1.56}
   m_EdgeRadius: 0
 --- !u!114 &-7892178526710978216
 MonoBehaviour:
@@ -176,3 +176,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   state: 0
+  sprites:
+  - {fileID: -5614276446541945404, guid: 20124ae4f4fe6f746b1c6a4aa705579c, type: 3}
